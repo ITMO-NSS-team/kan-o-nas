@@ -14,16 +14,18 @@ The framework is based on [GOLEM](https://github.com/aimclub/GOLEM) (evolutionar
 git clone https://github.com/ITMO-NSS-team/kan-o-nas.git
 cd kan-o-nas
 python -m venv .venv
+
 # Linux/Mac
 source .venv/bin/activate
-# Windows: .venv\Scripts\activate
-pip install --upgrade pip
+# Windows:
+.venv\Scripts\activate
+
 pip install -r requirements.txt
 ```
 
-Also, install the corresponding datasets: MNIST, FashionMNIST, EuroSAT or CIFAR-10 for image classification, 
+Also, install the corresponding datasets: MNIST, Fashion MNIST, EuroSAT, or CIFAR-10 for image classification; OSI SAF Sea-ice (SSMIS) for time series forecasting.
 
-Quick start
+## Quick start
 
 The repository provides two runnable examples. They demonstrate how to define a search space, run NAS, and post-train selected finalists.
 
