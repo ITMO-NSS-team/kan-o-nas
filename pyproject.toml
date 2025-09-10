@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kan-o-nas"
+version = "0.1.0"
+description = "Evolutionary full NAS for fair comparison of CNN and KAN architectures (KAN'o'NAS)."
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Vladimir Latypov" },
+    { name = "Alexander Hvatov" }
+]
+keywords = ["NAS", "evolutionary", "KAN", "CNN", "neural-architecture-search"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+[project.urls]
+Homepage = "https://github.com/ITMO-NSS-team/kan-o-nas"
+Issues = "https://github.com/ITMO-NSS-team/kan-o-nas/issues"
+
+[tool.setuptools]
+packages = { find = { include = ["nas*"], exclude = ["tests*", "docs*", "notebooks*", "scripts*", "examples*", "cases*"] } }
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }

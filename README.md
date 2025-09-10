@@ -1,5 +1,7 @@
 # KAN'o'NAS: Neural Architecture Search for fair architecture comparison
 
+[![PyPI version](https://badge.fury.io/py/kan-o-nas.svg)](https://pypi.org/project/kan-o-nas/)
+
 KAN'o'NAS is an architecture-agnostic, evolutionary full NAS framework for fair comparison of convolutional networks (CNN) and Kolmogorov–Arnold networks (KAN), including hybrids.
 It represents networks as DAGs, jointly optimizes topology and per-node hyperparameters, and selects models on a Pareto frontier of quality vs. complexity.
 The framework is based on [GOLEM](https://github.com/aimclub/GOLEM) (evolutionary graph optimization) and uses PyTorch as the training backend.
