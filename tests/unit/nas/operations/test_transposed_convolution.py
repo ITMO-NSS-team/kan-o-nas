@@ -21,7 +21,7 @@ def test_transposed_conv2d():
     # sample_input = torch.tensor([[[[1.0]]]])
     torch_output = F.conv_transpose2d(sample_input, structured)
     print(torch_output.shape)
-    nas_output = transposed_kan_conv2d(sample_input, kernel.flipped(), 3)
+    nas_output = transposed_kan_conv2d(sample_input, kernel.flipped(), 3, device="cpu")
     print(nas_output.shape)
 
     print(torch_output[0][0])
